@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Peky bakery</title>
+
+ 
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cairo:wght@200;300;400;600&family=Pacifico&family=Signika+Negative:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Lora:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="~/css/site.css">
+    <link rel="stylesheet" href="~/css/style.css">
+   
+
+    <style>
+        /* Place any additional inline CSS here if necessary */
+    </style>
+</head>
+<body>
+   
+    <!--TOP NAVIGATION-->
+    <header id="header">
+        <div class="topnav" id="myTopnav">
+            <a href="#"><img class="logo" src="../images/logo.png" alt=""></a>
+            <a id="active"></a>
+            <a href="/" class="active">ГЛАВНАЯ</a>
+            <a href="/feedback">ОНЛАЙН-КУРСЫ</a>
+            <a href="/feedback">ТЕХКАРТЫ</a>
+            <a href="/contact">КОНТАКТЫ</a>
+            <a href="#">О КУРСЕ</a>
+            <a href="#" style="float:right;padding: 24px 2px;"><i class="fa fa-search" class="openBtn" onclick="openSearch()"></i></a>
+            <a href="#" style="float:right;padding: 24px 2px;"><i class="fa fa-user-circle-o"></i></a>
+            <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="NavBar()">&#9776;</a>
+        </div>
+    </header>
+
+    <!-- Content Placeholder -->
+    @RenderBody()
+
+    <div class="hero">
+        <div class="container">
+            <!-- Text Section -->
+            <section class="text-section">
+                <h1 class="title-2">Авторская школа кондитерского мастерства</h1>
+                
+                <h5 class="sub-title">
+                    Передадаю знания, опыт и философию создания десертов.
+                    Свой сладкий шедевр вы сделаете сами.
+                </h5>
+                <a href="#" class="about-button"><span>О КУРСЕ</span></a>
+                
+            </section>
+
+            <!-- Slideshow Section -->
+            <section class="slideshow-container">
+                <div class="slide fade">
+                    <img src="../images/cake_Viol.jpeg" alt="Cake Image 1" class="image-class">
+                </div>
+                <div class="slide fade">
+                    <img src="../images/cake_pink.jpeg" alt="Cake Image 2" class="image-class">
+                </div>
+                <div class="slide fade">
+                    <img src="../images/cake_wedding.jpeg" alt="Cake Image 3" class="image-class">
+                </div>
+
+                <!-- Next and Previous buttons -->
+                <a class="prev" onclick="changeSlide(-1)">
+                    <img src="../images/left_arrow.png" alt="Previous" class="arrow-icon">
+                </a>
+                <a class="next" onclick="changeSlide(1)">
+                    <img src="../images/right_arrow.png" alt="Next" class="arrow-icon">
+                </a>
+            </section>
+        </div>
+    </div>
+
+
+
+
+    <!--SECTION1-->
+    <div class="about-container">
+        <div class="about-image">
+            <img src="../images/cake_Viol.jpeg" alt="Bakery Image" id="parallaxImage">
+        </div>
+        <div class="about-content">
+            <h1 class="about-title">Привет!</h1>
+            <p class="about-text"></p>
+            <p class="about-text">
+                Если вы попали на эту страничку, значит вами, также как и мной, движет желание учиться и развиваться в кондитерской сфере.
+
+                Последние годы я активно преподаю и за моими плечами сотни живых мастер классов и более тысячи учениц из разных городов и стран.
+
+                Сейчас я готова передать знания и опыт, приобретённые за пять лет моей насыщенной и интересной жизни кондитера!
+            </p>
+           
+            <p class="about-text">Виолетта </br>Кондитер, основатель школы</p>
+            <a href="#" class="about-button"><span>ЗАКАЗАТЬ КУРС</span></a>
+
+            
+        </div>
+
+
+
+
+
+
+        <div id="roll_back" style="display: none; position: fixed; bottom: 30px; right: 30px; z-index: 1000; cursor: pointer; background-color: #423a22; color: white; padding: 10px 15px; border-radius: 5px;">
+            Back to Top
+        </div>
+           
+    <!-- JavaScript -->
+    <script src="~/js/site.js"></script>
+</body>
+</html>
