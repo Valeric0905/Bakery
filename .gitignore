@@ -217,6 +217,9 @@ project.lock.json
 *.feature.cs
 *.feature.xlsx.*
 *.Specs_*.html
+# Ensure CSS files are not ignored
+!*.css
+!**/*.css
 
 # UWP Projects
 AppPackages/
