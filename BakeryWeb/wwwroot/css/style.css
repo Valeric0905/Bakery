@@ -8,12 +8,13 @@
     height: 100vh;
     background-color: #f5f2e9;
     overflow: hidden;
+  
 }
 
 .about-image {
     width: 500px;
     margin-left: 250px;
-  
+
 }
 
     .about-image img {
@@ -21,7 +22,7 @@
         height: auto;
         border-radius: 10px;
         position: relative;
-        left: -150%; /* Start off-screen to the left */
+        left: -50%; /* Start off-screen to the left */
         transition: left 1.5s cubic-bezier(0.25, 1, 0.5, 1); /* Smooth, soft transition */
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
     }
@@ -102,3 +103,68 @@
         margin: 0 auto;
         margin-bottom: 20px;
     }
+
+    /*courses section*/
+    .courses-container {
+        padding: 60px 20px;
+        background-color: #f9f9f9; /* Make the courses section stand out visually */
+        text-align: center;
+        margin-bottom: 60px; /* Optional margin to add separation at the bottom */
+    }
+
+    .courses-title {
+        font-size: 32px;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 40px; /* Adds space between the title and course items */
+    }
+
+    .courses-wrapper {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 40px; /* Gap between course items */
+        flex-wrap: wrap; /* Allow wrapping in case of smaller screen sizes */
+    }
+
+    .courses-item {
+        flex: 1;
+        max-width: 300px;
+        background-color: #ffffff;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+        .courses-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .courses-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .courses-item button {
+            padding: 12px 24px;
+            background-color: #28a745;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+            .courses-item button:hover {
+                background-color: #218838;
+            }
+}
