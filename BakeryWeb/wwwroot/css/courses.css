@@ -227,7 +227,7 @@
 
 /* FOOTER */
 .footer {
-    background-color: #695f59; /* Dark background for contrast */
+    background-color: #f5f2e9;
     color: #fff; /* White text for readability */
     padding: 40px 20px;
     font-family: Arial, sans-serif;
@@ -241,21 +241,36 @@
     max-width: 1200px;
     margin: 0 auto;
 }
+.social-links {
+    display: flex; /* Enable Flexbox for horizontal alignment */
+    justify-content: center; /* Center the links horizontally */
+    align-items: center; /* Align items vertically */
+    gap: 15px; /* Add spacing between links */
+}
+
+    .social-links a img {
+        width: 24px; /* Adjust the size of icons */
+        height: auto; /* Maintain aspect ratio */
+    }
 
 .footer__contacts, .footer__UNP, .footer__info, .footer__about {
     flex: 1;
-    min-width: 200px;
     padding: 10px;
+    text-align: center; /* Center-align content */
+    gap: 10px;
 }
 
     .footer__contacts h4, .footer__info h4, .footer__about h4 {
         font-size: 20px;
         margin-bottom: 15px;
-        color: #ffcc00; /* Highlight color for headings */
+      
+        color: #423a22;
+        font-family: 'Cormorant Garamond', Arial, sans-serif;
     }
 
     .footer__contacts a, .footer__info a, .footer__about a {
-        color: #ffcc00; /* Highlight color for links */
+        color: #423a22;
+        font-family: 'Cormorant Garamond', Arial, sans-serif;
         text-decoration: none;
         display: block;
         margin-bottom: 10px;
@@ -272,23 +287,12 @@
 
 .footer__UNP {
     font-size: 14px; /* Reduced font size for additional company info */
-    color: #bbb; /* Lighter color to make this info less visually heavy */
+    color: #423a22;
+    font-family: 'Cormorant Garamond', Arial, sans-serif;
+    margin-top: 20px;
+    font-size: 1rem;
 }
 
-.footer__social a {
-    margin-right: 10px;
-    display: inline-block;
-}
-
-    .footer__social a img {
-        width: 32px;
-        height: 32px;
-        transition: transform 0.3s ease;
-    }
-
-    .footer__social a:hover img {
-        transform: scale(1.2); /* Hover effect on social media icons */
-    }
 
 .footer__bottom {
     margin-top: 30px;
