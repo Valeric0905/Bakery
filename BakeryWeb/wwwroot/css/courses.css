@@ -263,7 +263,6 @@
     .footer__contacts h4, .footer__info h4, .footer__about h4 {
         font-size: 20px;
         margin-bottom: 15px;
-      
         color: #423a22;
         font-family: 'Cormorant Garamond', Arial, sans-serif;
     }
@@ -276,9 +275,34 @@
         margin-bottom: 10px;
     }
 
-        .footer__contacts a:hover, .footer__info a:hover, .footer__about a:hover {
-            text-decoration: underline;
-        }
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-5px);
+    }
+
+    50% {
+        transform: translateX(5px);
+    }
+
+    75% {
+        transform: translateX(-5px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.footer__contacts a:hover, .footer__info a:hover, .footer__about a:hover, .social-links a:hover  {
+    display: inline-block; /* Ensure the element can move */
+    animation: shake 0.5s; /* Apply the shake animation */
+    text-decoration: none; /* Optional: remove underline during shake */
+}
+
 
     .footer__contacts p, .footer__UNP p {
         margin: 8px 0;
@@ -304,5 +328,6 @@
     .footer__bottom p {
         font-size: 14px;
         color: #bbb;
+
     }
 
