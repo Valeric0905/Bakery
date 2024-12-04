@@ -6,23 +6,47 @@
         x.className = "topnav";
     }
 }
+
 document.addEventListener("DOMContentLoaded", function () {
+    // Back to Top button functionality
+    const rollBack = document.getElementById("roll_back");
+    if (rollBack) {
+        rollBack.addEventListener("click", function () {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
     window.onscroll = function () { scrollFunction() };
 
     function scrollFunction() {
         if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-            document.getElementById("myTopnav").style.width = "100%";
-            document.getElementById("header").style.position = "fixed";
-            document.getElementById("header").style.top = "0%";
+            const myTopnav = document.getElementById("myTopnav");
+            const header = document.getElementById("header");
+
+            if (myTopnav) {
+                myTopnav.style.width = "100%";
+            }
+
+            if (header) {
+                header.style.position = "fixed";
+                header.style.top = "0%";
+            }
 
             var rollBack = document.getElementById("roll_back");
             if (rollBack) {
                 rollBack.style.display = "block";
             }
         } else {
-            document.getElementById("myTopnav").style.width = "80%";
-            document.getElementById("header").style.position = "fixed";
-            document.getElementById("header").style.top = "2rem";
+            const myTopnav = document.getElementById("myTopnav");
+            const header = document.getElementById("header");
+
+            if (myTopnav) {
+                myTopnav.style.width = "80%";
+            }
+
+            if (header) {
+                header.style.position = "fixed";
+                header.style.top = "2rem";
+            }
 
             var rollBack = document.getElementById("roll_back");
             if (rollBack) {
@@ -30,18 +54,25 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }
     }
+
+    // Initial call to showSlides
+    showSlides();
 });
 
+let currentSlideIndex = 0;
 
-    let currentSlideIndex = 0;
+// Function to show slides
+function showSlides() {
+    let slides = document.getElementsByClassName("slide");
 
-    // Function to show slides
-    function showSlides() {
-        let slides = document.getElementsByClassName("slide");
+    if (!slides || slides.length === 0) {
+        console.warn("No slides found. Skipping slideshow setup.");
+        return;
+    }
 
     // Hide all slides
     for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  
+        slides[i].style.display = "none";
     }
 
     // Increment slide index
@@ -56,15 +87,18 @@ document.addEventListener("DOMContentLoaded", function () {
     slides[currentSlideIndex - 1].style.display = "block";
 
     // Change slide every 3 seconds
-    setTimeout(showSlides, 3000); 
+    setTimeout(showSlides, 3000);
 }
 
-    // Initial call to showSlides
-    showSlides();
+// Function to manually change slides with buttons
+function changeSlide(n) {
+    let slides = document.getElementsByClassName("slide");
 
-    // Function to manually change slides with buttons
-    function changeSlide(n) {
-        let slides = document.getElementsByClassName("slide");
+    if (!slides || slides.length === 0) {
+        console.error("No slides found.");
+        return;
+    }
+
     currentSlideIndex += n;
 
     // If we exceed slide length, start from the beginning
@@ -89,6 +123,11 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
     const image = document.getElementById("parallaxImage");
 
+    if (!image) {
+        console.warn("Parallax image not found. Skipping parallax effect setup.");
+        return;
+    }
+
     // Create an Intersection Observer instance
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
@@ -104,3 +143,4 @@ document.addEventListener("DOMContentLoaded", function () {
     // Observe the image element
     observer.observe(image);
 });
+
