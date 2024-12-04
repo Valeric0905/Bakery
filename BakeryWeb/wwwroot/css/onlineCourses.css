@@ -28,6 +28,7 @@
         z-index: 0; /* Ensure the pseudo-element is rendered properly */
         pointer-events: none; /* Prevent the pseudo-element from capturing pointer events */
         transform: scale(1.1);
+        margin-left: -85px;
     }
 
     .section-services .content {
@@ -49,6 +50,7 @@
             font-family: 'Cormorant Garamond', Arial, sans-serif;
             text-align: center;
             color: #423a22;
+            margin-top: 50px;
         }
 
           
