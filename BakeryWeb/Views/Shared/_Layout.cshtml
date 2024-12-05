@@ -2,23 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    
     <link rel="stylesheet" href="~/css/site.css">
     <link rel="stylesheet" href="~/css/style.css">
     <link rel="stylesheet" href="~/css/courses.css">
+    <!--Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&display=swap" rel="stylesheet">
    
 </head>
 <body>
     <!--TOP NAVIGATION-->
     <header id="header">
         <div class="topnav" id="myTopnav">
-            <a href="#"><img class="logo" src="../images/logo.png" alt=""></a>
+            <a href="#"><img class="logo" src="~/images/logo.png" alt=""></a>
             <a id="active"></a>
             <a href="/" class="active">ГЛАВНАЯ</a>
             <a href="/feedback">ОНЛАЙН-КУРСЫ</a>
             <a href="/feedback">ТЕХКАРТЫ</a>
             <a href="/contact">КОНТАКТЫ</a>
             <a href="#">О КУРСЕ</a>
+         
             <a href="#" style="float:right;padding: 24px 2px;"><i class="fa fa-search" class="openBtn" onclick="openSearch()"></i></a>
             <a href="#" style="float:right;padding: 24px 2px;"><i class="fa fa-user-circle-o"></i></a>
             <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="NavBar()">&#9776;</a>
@@ -27,8 +31,8 @@
         <main>
             @RenderBody()
         </main>
-    
-  
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
