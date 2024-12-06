@@ -171,6 +171,36 @@ details[open] summary ~ * {
         margin-top: 0;
     }
 }
+/* Custom styles for username link */
+.custom-username-link {
+    font-weight: bold;
+    padding: 24px 10px;
+    color: #333; /* Adjust the color to match your theme */
+    text-decoration: none;
+}
+
+    .custom-username-link:hover {
+        color: #007bff; /* Adjust hover color as desired */
+        text-decoration: underline; /* Optional: Add underline on hover */
+    }
+
+/* Custom styles for logout link */
+.custom-logout-button {
+    background: none; /* Removes default button background */
+    border: none; /* Removes default button border */
+    padding: 0; /* Removes extra button padding */
+    color: #007bff; /* Set the color to match a typical link */
+    text-decoration: none; /* Removes default button underline */
+    font: inherit; /* Inherits font styling for consistency */
+    cursor: pointer; /* Makes it clear that this is clickable */
+}
+
+    .custom-logout-button:hover {
+        text-decoration: underline; /* Adds underline to match link hover behavior */
+        color: #0056b3; /* Optional: Slightly darkens color on hover */
+    }
+
+
 
   
    
