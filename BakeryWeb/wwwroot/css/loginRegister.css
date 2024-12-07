@@ -1,0 +1,172 @@
+﻿/* Full-width container for alignment */
+.form-container-wrapper {
+    display: flex;
+    align-items: center; /* Vertically center */
+    justify-content: center; /* Horizontally center */
+    min-height: 120vh; /* Full viewport height */
+    padding: 20px; /* Extra padding for smaller screens */
+    background-color: #f8f9fa; /* Light background to improve readability */
+    background: url('../images/hero.png');
+   
+    
+}
+
+/* Card Styling */
+.login-logout-card {
+    width: 100%; /* Make the card take full width of its container */
+    max-width: 500px; /* Limit the maximum width for better readability */
+    border-radius: 15px; /* Smooth, rounded corners */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Shadow for a sense of depth */
+    border: 1px solid #ddd; /* Subtle border */
+    overflow: hidden; /* Keep edges neat */
+    margin-left: 150px;
+}
+
+/* Card Header */
+.custom-card-header {
+    background-color: #5c5449; /* Use primary color */
+    color: #ffffff; /* White text color */
+   
+    text-align: center; /* Center the title and tabs */
+}
+
+/* Navigation Tabs */
+.custom-nav-link {
+    color: #ffffff; /* White color for tab links */
+    font-weight: 500; /* Medium weight for easy readability */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+    .custom-nav-link:hover, .custom-nav-link.active {
+       
+        color: #ffffff; /* Keep text white */
+    }
+
+/* Card Body Styling */
+.custom-card-body {
+    padding: 40px; /* Increase padding to make form comfortable */
+    background-color: #ffffff; /* White background for contrast with container */
+    border-radius: 0 0 15px 15px; /* Rounded corners on bottom */
+}
+
+/* Form Styling */
+.form-floating label {
+    color: #666; /* Grey color for form labels */
+}
+
+.form-control {
+    padding: 10px; /* Comfortable padding for inputs */
+    border: 1px solid #ccc; /* Light gray border for inputs */
+    border-radius: 8px; /* Rounded corners for form fields */
+    margin-bottom: 10px; /* Spacing between fields */
+    transition: border-color 0.3s ease; /* Smooth transition for focus state */
+}
+
+    .form-control:focus {
+        border-color: #007bff; /* Change border color on focus */
+        outline: none; /* Remove the default outline */
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Subtle glow effect */
+    }
+
+/* Button Styling */
+#registerSubmit {
+    background-color: #5c5449; /* Blue background for button */
+    color: #ffffff; /* White text */
+    padding: 15px; /* Comfortable button padding */
+    border: none; /* No border */
+    border-radius: 8px; /* Rounded corners for button */
+    cursor: pointer; /* Indicate clickable */
+    width: 100%; /* Full width of container */
+    font-size: 1.1rem; /* Larger font size for button */
+    transition: background-color 0.3s ease, transform 0.1s ease; /* Hover and click effects */
+}
+
+    #registerSubmit:hover {
+        background-color: #423613; /* Darker blue on hover */
+    }
+
+    #registerSubmit:active {
+        transform: scale(0.98); /* Slight shrinking effect on click */
+    }
+
+#login-submit {
+    background-color: #5c5449; /* Matching color to #registerSubmit */
+    color: #ffffff; /* White text */
+    padding: 15px; /* Comfortable padding for the button */
+    border: none; /* Remove border */
+    border-radius: 8px; /* Rounded corners for the button */
+    cursor: pointer; /* Indicate clickable button */
+    width: 100%; /* Full width of container */
+    font-size: 1.1rem; /* Larger font size for the button */
+    transition: background-color 0.3s ease, transform 0.1s ease; /* Hover and click effects */
+}
+
+    #login-submit:hover {
+        background-color: #423613; /* Darker blue on hover, matching hover effect */
+    }
+
+    #login-submit:active {
+        transform: scale(0.98); /* Slight shrinking effect on click */
+    }
+#forgot-password {
+    color: #5c5449; /* Same color as the button to keep a cohesive theme */
+    font-weight: 500; /* Medium font weight for better readability */
+    text-decoration: none; /* Remove the default underline */
+    transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth transition for hover effects */
+    font-size: 1rem; /* Set font size to be readable but not too prominent */
+}
+
+    #forgot-password:hover {    
+        text-decoration: underline; /* Underline on hover for visual feedback */
+    }
+
+/* Label for Checkbox */
+.form-label {
+    display: flex; /* Flex to align checkbox with text */
+    align-items: center; /* Center vertically */
+    gap: 10px; /* Space between checkbox and label text */
+    font-weight: 500; /* Medium font weight for better emphasis */
+    color: #5c5449; /* Matching color for cohesive design */
+    cursor: pointer; /* Pointer cursor to indicate interactivity */
+    font-size: 1rem; /* Set font size to ensure readability */
+}
+
+/* Checkbox Styling */
+.form-check-input {
+    width: 20px; /* Larger size for better usability */
+    height: 20px; /* Make checkbox slightly bigger */
+    border-radius: 4px; /* Rounded corners for a softer look */
+    border: 1px solid #ccc; /* Light grey border */
+    transition: all 0.3s ease; /* Smooth transition for hover/focus states */
+    cursor: pointer; /* Pointer cursor for better UX */
+}
+
+    /* Checkbox Hover and Focus Effect */
+    .form-check-input:hover {
+        border-color: #5c5449; /* Change border color on hover */
+    }
+
+    .form-check-input:focus {
+        outline: none; /* Remove default outline */
+        box-shadow: #5c5449; /* Subtle blue glow when focused */
+    }
+
+
+   
+
+
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .login-logout-card {
+        max-width: 90%; /* Ensure the card fits well on smaller screens */
+    }
+
+    .custom-card-body {
+        padding: 20px; /* Adjust padding for smaller screens */
+    }
+
+    #registerSubmit {
+        padding: 12px; /* Slightly smaller padding for button on mobile */
+    }
+}
