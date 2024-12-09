@@ -4,7 +4,11 @@ namespace BakeryWeb.Controllers
 {
     public class CoursesController : Controller
     {
-        public IActionResult Index()
+        public IActionResult Courses()
+        {
+            return View();
+        }
+        public IActionResult Product()
         {
             return View();
         }

@@ -1,0 +1,139 @@
+﻿.section-product {
+    font-family: 'Cormorant Garamond', Arial, sans-serif;
+    background-color: #ede7df;
+    position: relative;
+    color: #423613;
+    padding-top: 115px;
+    padding-bottom: 180px;
+    overflow: hidden;
+}
+
+.container_product {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.details {
+    flex: 1;
+    max-width: 600px;
+    margin-right: 20px;
+}
+
+    .details h1 {
+        font-size: 3rem;
+        color: #423a22;
+        margin-bottom: 10px;
+    }
+
+    .details .price {
+        font-size: 1.5rem;
+        color: red;
+        margin-bottom: 20px;
+        font-weight: 800;
+    }
+
+    .details .buy-button {
+        display: inline-block;
+        position: relative; /* Required for pseudo-element positioning */
+        overflow: hidden; /* Ensures the fill doesn't overflow */
+        margin-top: 10px;
+        padding: 10px 20px;
+        font-size: 1em;
+        color: #fff;
+        background-color: #423613;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: transform 0.3s ease, color 0.3s ease; /* Added transform transition */
+        z-index: 1; /* Make sure the text stays above the pseudo-element */
+        font-family: 'Cormorant Garamond', Arial, sans-serif;
+        font-size: 1.2em;
+    }
+
+        .details .buy-button::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%; /* Starts from the left */
+            width: 100%;
+            height: 100%;
+            background-color: #876c58; /* Color that will fill the button */
+            transition: all 0.5s ease; /* Smooth transition for filling effect */
+            z-index: 0; /* Place the background below the text */
+        }
+
+        .details .buy-button:hover::before {
+            left: 0; /* Moves the pseudo-element to fill the button from left to right */
+        }
+
+        .details .buy-button:hover {
+            color: #fff; /* Keep the text color consistent during hover */
+            transform: scale(1.1); /* Makes the button 10% larger */
+        }
+
+        .details .buy-button span {
+            position: relative; /* Keeps the text above the pseudo-element */
+            z-index: 2; /* Ensures the text stays on top */
+        }
+
+    .details .description {
+        margin-top: 20px;
+    }
+
+        .details .description h3 {
+            color: #423a22;
+            font-size: 25px;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .details .description ul {
+            list-style-type: circle;
+            padding-left: 0;
+        }
+
+            .details .description ul li {
+                margin-bottom: 10px;
+                display: flex;
+                align-items: center;
+                font-size: 20px;
+            }
+
+                .details .description ul li img.arrow-icon {
+                    margin-right: 10px;
+                    width: 16px;
+                    height: 16px;
+                }
+
+
+.image {
+    flex: 1;
+    max-width: 500px;
+}
+
+    .image img {
+        width: 100%;
+        border-radius: 10px;
+    }
+
+
+
+@media (max-width: 768px) {
+    .container_product {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .details {
+        margin-right: 0;
+        text-align: center;
+    }
+
+    .image {
+        margin-top: 20px;
+    }
+}
