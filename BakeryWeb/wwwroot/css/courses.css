@@ -1,0 +1,333 @@
+﻿.courses-container {
+    width: 100%;
+    padding: 60px 20px;
+    background-color: #e8dfcf;
+    
+}
+
+.courses-title {
+    text-align: center;
+    font-size: 28px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Adds space between the images and title text */
+    font-family: 'Cormorant Garamond', Arial, sans-serif;
+    font-weight: 1000;
+    margin-bottom: 50px;
+}
+
+.courses-title-icon {
+    width: 30px; /* Adjust the width as needed */
+    height: auto; /* Keeps the original aspect ratio */
+}
+
+.courses-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.card {
+    position: relative;
+    width: 300px;
+    padding: 25px;
+    border-radius: 30px;
+    background-color: #f5f5f566;
+    backdrop-filter: blur(10px);
+    max-width: 300px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin: 20px;
+}
+
+    .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+.card__header {
+    display: grid;
+    gap: 4px;
+   
+}
+
+.card__header-title {
+    order: 2;
+    font-weight: bold;
+    font-size: 21px;
+    margin-bottom: 10px;
+    font-family: 'Cormorant Garamond', Arial, sans-serif;
+    font-weight: 1000;
+    text-align: center;
+    margin-right: 30px;
+}
+
+.card__header-subtitle {
+    order: 3;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.card__header-category {
+    order: 1;
+    font-size: 14px;
+    color: #999;
+}
+
+.card__items {
+    position: relative;
+    margin: 70px 0;
+    text-align: center;
+    transition: 1s;
+    margin-top: 120px;
+}
+
+    .card__items::before,
+    .card__items::after {
+        content: "";
+        display: block;
+        position: absolute;
+        border-radius: 50%;
+        z-index: -2;
+    }
+
+    .card__items::before {
+        width: 200px;
+        height: 200px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #e7e7e7;
+        transition: 1s;
+    }
+
+    .card__items::after {
+        width: 70%;
+        height: 40px;
+        bottom: 0;
+        right: 30px;
+        transform: translate(-25%, 50%);
+        background-color: #000;
+        filter: blur(10px);
+        opacity: .2;
+        transition: .5s;
+    }
+
+.card__item {
+    margin-bottom: 20px;
+}
+
+.card__item-input {
+    position: absolute;
+    display: none;
+}
+
+    .card__item-input:checked ~ .card__item-img {
+        display: block;
+    }
+
+
+
+.card__item-img {
+    display: none;
+    width: 100%;
+    transform: scale(1);
+    transition: .5s;
+    max-width: 100%;
+    height: auto;
+    border-radius: 160px;
+}
+
+
+
+.card__filters {
+    margin-top: 20px;
+}
+
+.card__color-filters {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    padding-bottom: 16px;
+    text-align: center;
+    transition: 1s;
+    transition-delay: .2s;
+}
+
+.card__color-filter {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: var(--color-option);
+    border: 1px solid #ccc;
+}
+
+    .card__color-filter::before {
+        content: '';
+        display: block;
+        width: inherit;
+        height: inherit;
+        background-color: var(--color-option);
+    }
+
+.card__footer {
+    margin-top: 20px;
+}
+
+.card__button {
+    padding: 10px 20px;
+    background-color: #007bff; /* You can change this color as needed */
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+ 
+}
+
+    .card__button:hover {
+        background-color: #0056b3; /* Darker shade for hover effect */
+    }
+
+.card:hover .card__items::after {
+    width: 75%;
+}
+
+.card:hover .card__item-img {
+    transform: scale(1.2) rotate(5deg) translate(10px, -20px);
+}
+
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-image img {
+        width: 80%;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+
+    .courses-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* FOOTER */
+.footer {
+    background-color: #e8dfcf;
+    color: #fff; /* White text for readability */
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+}
+
+.footer__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.social-links {
+    display: flex; /* Enable Flexbox for horizontal alignment */
+    justify-content: center; /* Center the links horizontally */
+    align-items: center; /* Align items vertically */
+    gap: 15px; /* Add spacing between links */
+}
+
+    .social-links a img {
+        width: 24px; /* Adjust the size of icons */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+.footer__contacts, .footer__UNP, .footer__info, .footer__about {
+    flex: 1;
+    padding: 10px;
+    text-align: center; /* Center-align content */
+    gap: 10px;
+}
+
+    .footer__contacts h4, .footer__info h4, .footer__about h4 {
+        font-size: 20px;
+        margin-bottom: 15px;
+        color: #423a22;
+        font-family: 'Cormorant Garamond', Arial, sans-serif;
+    }
+
+    .footer__contacts a, .footer__info a, .footer__about a {
+        color: #423a22;
+        font-family: 'Cormorant Garamond', Arial, sans-serif;
+        text-decoration: none;
+        display: block;
+        margin-bottom: 10px;
+    }
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-5px);
+    }
+
+    50% {
+        transform: translateX(5px);
+    }
+
+    75% {
+        transform: translateX(-5px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.footer__contacts a:hover, .footer__info a:hover, .footer__about a:hover, .social-links a:hover  {
+    display: inline-block; /* Ensure the element can move */
+    animation: shake 0.5s; /* Apply the shake animation */
+    text-decoration: none; /* Optional: remove underline during shake */
+}
+
+
+    .footer__contacts p, .footer__UNP p {
+        margin: 8px 0;
+        line-height: 1.6;
+    }
+
+.footer__UNP {
+    font-size: 14px; /* Reduced font size for additional company info */
+    color: #423a22;
+    font-family: 'Cormorant Garamond', Arial, sans-serif;
+    margin-top: 20px;
+    font-size: 1rem;
+}
+
+
+.footer__bottom {
+    margin-top: 30px;
+    border-top: 1px solid #555;
+    padding-top: 20px;
+    text-align: center;
+}
+
+    .footer__bottom p {
+        font-size: 14px;
+        color: #bbb;
+
+    }
+

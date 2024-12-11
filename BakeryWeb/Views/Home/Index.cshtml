@@ -1,0 +1,279 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Peky bakery</title>
+
+
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cairo:wght@200;300;400;600&family=Pacifico&family=Signika+Negative:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Lora:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="~/css/site.css">
+    <link rel="stylesheet" href="~/css/style.css">
+    <link rel="stylesheet" href="~/css/courses.css">
+    <link rel="stylesheet" href="~/css/onlineCourses.css">
+
+
+    <style>
+
+
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <div class="container">
+            <!-- Text Section -->
+            <section class="text-section">
+                <h1 class="title-2">Авторская школа кондитерского мастерства</h1>
+
+                <h5 class="sub-title">
+                    Передадаю знания, опыт и философию создания десертов.
+                    Свой сладкий шедевр вы сделаете сами.
+                </h5>
+                <a href="#" class="about-button"><span>О КУРСЕ</span></a>
+
+            </section>
+
+            <!-- Slideshow Section -->
+            <section class="slideshow-container">
+                <div class="slide fade">
+                    <img src="../images/cake_Viol.jpeg" alt="Cake Image 1" class="image-class">
+                </div>
+                <div class="slide fade">
+                    <img src="../images/cake_pink.jpeg" alt="Cake Image 2" class="image-class">
+                </div>
+                <div class="slide fade">
+                    <img src="../images/cake_wedding.jpeg" alt="Cake Image 3" class="image-class">
+                </div>
+
+                <!-- Next and Previous buttons -->
+                <a class="prev" onclick="changeSlide(-1)">
+                    <img src="../images/left_arrow.png" alt="Previous" class="arrow-icon">
+                </a>
+                <a class="next" onclick="changeSlide(1)">
+                    <img src="../images/right_arrow.png" alt="Next" class="arrow-icon">
+                </a>
+            </section>
+        </div>
+    </div>
+
+
+
+
+    <!--about section-->
+    <div class="about-container">
+        <div class="about-image">
+            <img src="../images/cake_Viol.jpeg" alt="Bakery Image" id="parallaxImage">
+        </div>
+        <div class="about-content">
+            <h1 class="about-title">Привет!</h1>
+            <p class="about-text"></p>
+            <p class="about-text">
+                Если вы попали на эту страничку, значит вами, также как и мной, движет желание учиться и развиваться в кондитерской сфере.
+
+                Последние годы я активно преподаю и за моими плечами сотни живых мастер классов и более тысячи учениц из разных городов и стран.
+
+                Сейчас я готова передать знания и опыт, приобретённые за пять лет моей насыщенной и интересной жизни кондитера!
+            </p>
+
+            <p class="about-text">Виолетта </br>Кондитер, основатель школы</p>
+            <a href="#" class="about-button"><span>ЗАКАЗАТЬ КУРС</span></a>
+
+
+        </div>
+    </div>
+
+    <!--courses section-->
+    <div class="courses-container">
+        <h2 class="courses-title">
+            <img src="../images/left_arrow.png" class="courses-title-icon" alt="Left Icon">
+            НАПРАВЛЕНИЯ ОБУЧЕНИЯ
+            <img src="../images/right_arrow.png" class="courses-title-icon" alt="Right Icon">
+        </h2>
+        <div class="courses-wrapper">
+            <article class="card">
+                <header class="card__header">
+                    <h2 class="card__header-title">ОНЛАЙН-КУРСЫ</h2>
+                </header>
+                <div class="card__items">
+                    <div class="card__item">
+                        <input class="card__item-input"
+                               id="green"
+                               type="radio"
+                               name="color"
+                               checked />
+                        <img src="../images/cake_pink.jpeg"
+                             class="card__item-img" />
+                    </div>
+                </div>
+                <footer class="card__footer">
+                    <a href="~/Courses/Courses" class="about-button"><span>О КУРСЕ</span></a>
+
+
+                </footer>
+            </article>
+            <article class="card">
+                <header class="card__header">
+                    <h2 class="card__header-title">ТЕХКАРТЫ</h2>
+                </header>
+                <div class="card__items">
+                    <div class="card__item">
+                        <input class="card__item-input"
+                               id="blue"
+                               type="radio"
+                               name="color2"
+                               checked />
+                        <img src="../images/cake_pink.jpeg"
+                             class="card__item-img" />
+                    </div>
+                </div>
+                <footer class="card__footer">
+                    <a href="#" class="about-button"><span>О КУРСЕ</span></a>
+                </footer>
+            </article>
+            <article class="card">
+                <header class="card__header">
+                    <h2 class="card__header-title">БЕСПЛАТНЫЕ УРОКИ</h2>
+                </header>
+                <div class="card__items">
+                    <div class="card__item">
+                        <input class="card__item-input"
+                               id="black"
+                               type="radio"
+                               name="color3"
+                               checked />
+                        <img src="../images/cake_pink.jpeg"
+                             class="card__item-img" />
+                    </div>
+                </div>
+                <footer class="card__footer">
+                    <a href="#" class="about-button"><span>О КУРСЕ</span></a>
+                </footer>
+            </article>
+        </div>
+    </div>
+    <!-- FAQ -->
+    <div class="faq-section" id="faq">
+        <h2 class="secondary">
+            <img src="../images/left_arrow.png" class="courses-title-icon" alt="Left Icon">
+            ОТВЕТЫ НА ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ
+            <img src="../images/right_arrow.png" class="courses-title-icon" alt="Right Icon">
+        </h2>
+
+        <div class="faq">
+            <details>
+                <summary>Как оплатить уроки и рецепты?</summary>
+                <div class="content">
+                    <p>
+                        Вся оплата производится на нашем сайте автоматически, кроме пакетов рецептов, которые идут со скидкой. Принимаются международные карты VISA и Master Card. Находясь в любой точке мира вы можете совершить оплату, используя данные своей карточки. Выбираете урок или рецепт, добавляете его в корзину, и затем нажав кнопку оформить заказ попадаете на страницу с оплатой.
+                    </p>
+                </div>
+            </details>
+
+            <details>
+                <summary>  Как долго у меня будет доступ к уроку?</summary>
+                <div class="content">
+                    <p>
+                        После оплаты урока, он появится в вашем личном кабинете на сайте, и будет доступен вам в постоянное пользование.
+                </div>
+            </details>
+
+            <details>
+                <summary> Что делать если не проходит оплата?</summary>
+                <div class="content">
+                    <p>
+                        Если у вас возникли сложности с автоматической оплатой, свяжитесь с нами любым удобным способом (смотрите раздел контакты), мы вышлем вам дополнительную информацию и дополнительные варианты оплаты.
+                    </p>
+                </div>
+            </details>
+
+            <details>
+                <summary>Будет ли обратная связь после покупки урока?</summary>
+                <div class="content">
+                    <p>
+                        Все наши уроки с обратной связью, и если после просмотра урока, у вас остались какие-то вопросы, вы можете отправить их нам на почту в разделе контакты.
+                    </p>
+                </div>
+            </details>
+        </div>
+    </div>
+
+    <footer class="footer" id="footer">
+        <div class="footer__container">
+            <div class="footer__contacts">
+                <h4>КОНТАКТЫ</h4>
+                <div class="social-links">
+                    <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+                        <img src="../images/what.png" alt="Facebook">
+                    </a>
+                    <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+                        <img src="../images/inst.png" alt="Twitter">
+                    </a>
+                    <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+                        <img src="../images/tel.png" alt="Instagram">
+                    </a>
+                </div>
+
+                <p> <a href="tel:+1234567890">+1 234 567 890</a></p>
+                <p> <a href="mailto:info@example.com">info@example.com</a></p>
+
+            </div>
+            <div class="footer__UNP">
+                <p>
+                    ИП КОЛЕСНИКОВА ВИОЛЕТТА
+                    ИНН 616898781544
+                    ОГРНИП 322619600125356
+                    Юридический адрес:
+                    344103, г. МОСКВА,
+                    ул. Зорге 58а/8, кв. 73
+                </p>
+
+            </div>
+
+            <div class="footer__info">
+                <h4>ИНФОРМАЦИЯ</h4>
+                <a href="/feedback">ВОПРОСЫ И ОТВЕТЫ</a>
+                <a href="/feedback">ПУБЛИЧНАЯ ОФЕРТА</a>
+                <a href="/contact">ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ</a>
+                <a href="#">ПОЛЬЗОВАТЕЛЬСКОЕ СОГЛАШЕНИЕ</a>
+
+            </div>
+
+            <div class="footer__about">
+                <h4>ОБУЧЕНИЕ</h4>
+                <a href="/feedback">ОНЛАЙН-КУРСЫ</a>
+                <a href="/feedback">ТЕХКАРТЫ</a>
+                <a href="/contact">КОНТАКТЫ</a>
+                <a href="#">О КУРСЕ</a>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p>&copy; 2025 Lucky Leon Inc. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+
+
+
+
+    <div id="roll_back" style="display: none; position: fixed; bottom: 30px; right: 30px; z-index: 1000; cursor: pointer; background-color: #423a22; color: white; padding: 10px 15px; border-radius: 5px;">
+        Back to Top
+    </div>
+
+    <!-- JavaScript -->
+    <script src="~/js/site.js"></script>
+</body>
+</html>
+

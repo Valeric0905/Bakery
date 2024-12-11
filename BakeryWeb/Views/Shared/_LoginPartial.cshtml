@@ -1,0 +1,43 @@
+﻿@using BakeryWeb.Areas.Identity.Data
+@using Microsoft.AspNetCore.Identity
+
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+@{
+    string userName = null;
+    if (SignInManager.IsSignedIn(User))
+    {
+        var user = await UserManager.GetUserAsync(User);
+        userName = user?.FirstName ?? user?.UserName;
+    }
+}
+<link rel="stylesheet" href="~/css/style.css">
+@if (SignInManager.IsSignedIn(User))
+{
+    <div style="float:right; display:flex; align-items:center;">
+        <a href="@Url.Page("/Account/Manage/Index", new { area = "Identity" })"
+           class="nav-link text-dark custom-username-link">
+            <i class="fa fa-user-circle-o"></i> ПРИВЕТ @userName!
+        </a>
+        <form id="logoutForm" class="form-inline"
+              asp-area="Identity" asp-page="/Account/Logout"
+              asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })"
+              style="padding: 24px 10px;">
+            <button id="logout" type="submit" class="nav-link text-dark custom-logout-button">ВЫЙТИ</button>
+        </form>
+    </div>
+    
+}
+else
+{
+    <a href="@Url.Page("/Account/Register", new { area = "Identity" })"
+       style="float:right; padding: 24px 10px;" class="nav-link text-dark">
+        Зарегистрироваться
+    </a>
+    <a href="@Url.Page("/Account/Login", new { area = "Identity" })"
+       style="float:right; padding: 24px 10px;" class="nav-link text-dark">
+        Войти
+    </a>
+}
+
