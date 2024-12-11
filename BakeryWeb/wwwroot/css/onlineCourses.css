@@ -1,0 +1,171 @@
+﻿.p, a, h1, h2, h3, h4, h5, h6, ul, li {
+    margin: 0;
+    padding: 0;
+   
+   
+}
+
+
+.section-services {
+    font-family: 'Cormorant Garamond', Arial, sans-serif;
+    background-color: #ede7df;
+    position: relative;
+    color: #423613;
+    padding-top: 115px;
+    padding-bottom: 120px;
+    overflow: hidden;
+}
+
+    .section-services::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+       
+    }
+
+    .section-services .content {
+        position: relative;
+        z-index: 1; /* Ensure content is on top of the pseudo-element */
+    }
+
+    
+
+
+    .section-services .header-section {
+        margin-bottom: 34px;
+    }
+
+        .section-services .header-section .title {
+            position: relative;
+            font-weight: 700;
+            font-size: 65px;
+            font-family: 'Cormorant Garamond', Arial, sans-serif;
+            text-align: center;
+            color: #423a22;
+            margin-top: 50px;
+        }
+
+          
+
+        .section-services .header-section .description {
+            font-size: 14px;
+            color: #282828;
+        }
+
+    .section-services .services-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 60px;
+        padding: 20px 100px;
+    }
+
+    .section-services .single-service {
+        position: relative;
+        margin-top: 30px;
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 50px 40px;
+        overflow: hidden;
+    }
+
+        .section-services .single-service .content {
+            position: relative;
+            z-index: 20;
+        }
+
+        .section-services .single-service .circle-before {
+            position: absolute;
+            top: 0;
+            right: 0px;
+            transform: translate(40%, -40%);
+            width: 150px;
+            height: 150px;
+            background-color: #807166;
+           
+            border-radius: 50%;
+            opacity: 0.5;
+            z-index: 10;
+            transition: all 0.6s;
+        }
+
+        .section-services .single-service:hover .circle-before {
+            width: 100%;
+            height: 100%;
+            transform: none;
+            border: 0;
+            border-radius: 0;
+            opacity: 1;
+        }
+
+        .section-services .single-service .icon {
+            display: inline-block;
+            margin-bottom: 26px;
+            width: 300px;
+           
+            background-color: #ff4500;
+            border-radius: 5px;
+            line-height: 70px;
+            text-align: center;
+            color: #fff;
+            font-size: 30px;
+            transition: all 0.3s;
+        }
+
+        .section-services .single-service:hover .icon {
+            background-color: #fff;
+            color: #ff4500;
+        }
+
+        .section-services .single-service .title {
+            margin-bottom: 18px;
+            font-weight: 700;
+            font-size: 23px;
+            transition: color 0.3s;
+        }
+
+        .section-services .single-service:hover .title {
+            color: #fff;
+        }
+
+        .section-services .single-service .description {
+            margin-bottom: 20px;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        .section-services .single-service:hover .description {
+            color: #fff;
+        }
+
+        .section-services .single-service a {
+            position: relative;
+            font-size: 18px;
+            color: #202020;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .section-services .single-service:hover a {
+            color: #fff;
+            
+        }
+
+        .section-services .single-service a:after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background-color: #ff4500;
+            transition: background-color 0.3s;
+        }
+
+        .section-services .single-service:hover a:after {
+            background-color: #fff;
+        }
+
