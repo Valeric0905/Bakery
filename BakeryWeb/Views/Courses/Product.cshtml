@@ -18,7 +18,7 @@
         <div class="details">
             <h1>Торт "Замок"</h1>
             <p class="price">5990 р.</p>
-                <a href="#" class="buy-button"><span>Купить</span></a>
+                <a href="#" class="buy-button" onclick="openPopup('5990 р.')"><span>Купить</span></a>
             
             <div class="description">
                 <h3>Подробные видео-уроки создания торта "Замок"</h3>
@@ -38,5 +38,45 @@
         </div>
     </div>
     </section>
+    <div class="popup-overlay" id="popup">
+        <div class="popup">
+            <button class="close-button" onclick="closePopup()">&times;</button>
+            <h2>Ваш заказ</h2>
+            <p>Цена: <span class="price-display">5990 р.</span></p> <!-- Price placeholder -->
+            <form action="/Payment/RedirectToRoboKassa" method="post">
+                @Html.AntiForgeryToken() <!-- Required for CSRF -->
+                <input type="text" name="name" placeholder="Ваше имя" required>
+                <input type="email" name="email" placeholder="Ваш Email" required>
+                <input type="text" name="phone" placeholder="Ваш номер телефона" required>
+                <input type="number" name="amount" placeholder="Цена" value="5990" required>
+                <button type="submit">Оформить заказ</button>
+            </form>
+
+        </div>
+    </div>
+
+
+
+
+    <script>
+        function openPopup(price) {
+            // Update the displayed price
+            const priceElement = document.querySelector('#popup .price-display');
+            const priceInput = document.getElementById('popup-price'); // Hidden input field
+
+            if (priceElement && priceInput) {
+                priceElement.textContent = price; // Update the visible price
+                priceInput.value = price.replace(' р.', ''); // Update the hidden input value (remove currency)
+            }
+
+            // Show the popup
+            document.getElementById('popup').style.display = 'flex';
+        }
+
+        function closePopup() {
+            document.getElementById('popup').style.display = 'none';
+        }
+    </script>
+
 </body>
 </html>
