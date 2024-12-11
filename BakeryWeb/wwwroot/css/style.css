@@ -201,6 +201,43 @@ details[open] summary ~ * {
         color: black ; /* Optional: Slightly darkens color on hover */
     }
 
+/* Privacy Policy */
+
+/* Main Content */
+.main-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 150px;
+}
+
+/* Section Styles */
+.text-block {
+    margin-bottom: 20px;
+}
+
+    .text-block h2 {
+        color: #343a40;
+        margin-bottom: 10px;
+    }
+
+    .text-block .paragraph {
+        margin-bottom: 10px;
+        text-align: justify;
+    }
+.centered-title {
+    text-align: center; /* Centers the text */
+    font-family: 'Arial', sans-serif; /* Sets the font */
+    font-size: 2rem; /* Adjusts font size */
+    color: #333; /* Sets the text color */
+    margin: 20px 0; /* Adds vertical spacing */
+}
+
+
+
 
 
   
