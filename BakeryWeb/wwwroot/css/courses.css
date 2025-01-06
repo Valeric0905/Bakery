@@ -331,3 +331,166 @@
 
     }
 
+
+@media (max-width: 1024px) {
+    .courses-container {
+        padding: 40px 15px; /* Reduce padding for smaller screens */
+    }
+
+    .courses-title {
+        font-size: 24px; /* Adjust font size */
+        flex-direction: column; /* Stack title and icon vertically */
+        gap: 5px;
+    }
+
+    .courses-wrapper {
+        gap: 20px; /* Reduce space between cards */
+        flex-wrap: wrap;
+    }
+
+    .card {
+        width: 90%; /* Adjust card size for smaller screens */
+        max-width: none; /* Allow flexibility */
+        margin: 10px auto;
+    }
+
+    .card__header-title {
+        font-size: 18px; /* Adjust title font size */
+    }
+
+    .card__header-subtitle,
+    .card__header-category {
+        font-size: 12px; /* Adjust text size */
+    }
+
+    .card__items::before {
+        width: 150px; /* Adjust circle size */
+        height: 150px;
+    }
+
+    .card__items::after {
+        width: 50%; /* Reduce shadow size */
+    }
+}
+
+@media (max-width: 768px) {
+    .courses-container {
+        padding: 30px 10px;
+    }
+
+    .courses-title {
+        font-size: 20px; /* Further reduce font size */
+        text-align: center;
+    }
+
+    .courses-wrapper {
+        flex-direction: column; /* Stack cards vertically */
+        align-items: center; /* Center align cards */
+        gap: 15px; /* Reduce spacing */
+    }
+
+    .card {
+        width: 100%; /* Full-width for cards */
+        padding: 15px; /* Reduce padding */
+    }
+
+    .card__header-title {
+        font-size: 16px;
+    }
+
+    .card__header-subtitle,
+    .card__header-category {
+        font-size: 10px;
+    }
+
+    .card__items::before {
+        width: 120px; /* Smaller circle */
+        height: 120px;
+    }
+
+    .card__items::after {
+        width: 40%; /* Reduce shadow size further */
+    }
+}
+
+@media (max-width: 480px) {
+    .courses-container {
+        padding: 20px 5px;
+    }
+
+    .courses-title {
+        font-size: 18px; /* Smaller font for very small devices */
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .courses-wrapper {
+        gap: 10px; /* Tighten space */
+    }
+
+    .card {
+        padding: 10px; /* Minimize padding */
+        width: 95%; /* Slightly less than full width */
+        margin: 10px auto;
+    }
+
+    .card__header-title {
+        font-size: 14px;
+    }
+
+    .card__header-subtitle,
+    .card__header-category {
+        font-size: 10px;
+    }
+
+    .card__items::before {
+        width: 100px;
+        height: 100px; /* Further reduce circle size */
+    }
+
+    .card__items::after {
+        width: 30%; /* Minimal shadow for mobile */
+    }
+
+    .footer {
+        padding: 20px 10px; /* Reduce footer padding */
+    }
+
+    .footer__container {
+        flex-direction: column; /* Stack footer sections vertically */
+        align-items: center;
+    }
+
+    .footer__contacts,
+    .footer__UNP,
+    .footer__info,
+    .footer__about {
+        width: 100%; /* Full width for each section */
+        margin-bottom: 15px;
+    }
+
+        .footer__contacts h4,
+        .footer__info h4,
+        .footer__about h4 {
+            font-size: 16px; /* Adjust header size */
+        }
+
+        .footer__contacts p,
+        .footer__UNP p {
+            font-size: 12px; /* Smaller text */
+        }
+
+    .footer__bottom {
+        font-size: 10px; /* Adjust bottom text */
+    }
+
+    .social-links {
+        gap: 10px; /* Smaller spacing */
+    }
+
+        .social-links a img {
+            width: 20px; /* Smaller icons */
+        }
+}
+
+

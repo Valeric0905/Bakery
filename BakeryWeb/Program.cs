@@ -40,6 +40,12 @@ app.UseAuthentication();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+
+app.MapControllerRoute(
+    name: "payment",
+    pattern: "Payment/{action}",
+    defaults: new { controller = "Payment" });
+
 app.MapRazorPages();
 
 app.Run();
