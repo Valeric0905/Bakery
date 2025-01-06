@@ -18,7 +18,7 @@ namespace BakeryWeb.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult PrivacyPolicy()
         {
             return View();
         }

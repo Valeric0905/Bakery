@@ -15,17 +15,16 @@
     <!--TOP NAVIGATION-->
     <header id="header">
         <div class="topnav" id="myTopnav">
-            <a href="#"><img class="logo" src="~/images/logo.png" alt=""></a>
+            <a href="@Url.Action("Index", "Home")">
+                <img class="logo" src="~/images/logo.png" alt="Home">
+            </a>
             <a id="active"></a>
-            <a href="/" class="active">ГЛАВНАЯ</a>
-            
+            <a href="/" class="active">ГЛАВНАЯ</a>           
             <a href="~/Courses/Courses">ОНЛАЙН-КУРСЫ</a>
-            <a href="/feedback">ТЕХКАРТЫ</a>
+            <a href="~/Courses/TechCard">РЕЦЕПТУРНЫЕ КАРТЫ</a>
+            <a href="~/Courses/FreeLessons">БЕСПЛАТНЫЕ УРОКИ</a>
             <a href="/Home/Index#footer">КОНТАКТЫ</a>
-
-            <a href="#">О КУРСЕ</a>
-         
-           
+                      
             <partial name="_LoginPartial" />
             <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="NavBar()">&#9776;</a>
         </div>

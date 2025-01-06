@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
     <title>@ViewBag.Title - Peky bakery</title>
 
 
@@ -49,13 +51,16 @@
             <!-- Slideshow Section -->
             <section class="slideshow-container">
                 <div class="slide fade">
-                    <img src="../images/cake_Viol.jpeg" alt="Cake Image 1" class="image-class">
+                    <img src="../images/cake_green.jpeg" alt="Cake Image 1" class="image-class">
                 </div>
                 <div class="slide fade">
                     <img src="../images/cake_pink.jpeg" alt="Cake Image 2" class="image-class">
                 </div>
                 <div class="slide fade">
                     <img src="../images/cake_wedding.jpeg" alt="Cake Image 3" class="image-class">
+                </div>
+                <div class="slide fade">
+                    <img src="../images/cake_unicorn.jpeg" alt="Cake Image 4" class="image-class">
                 </div>
 
                 <!-- Next and Previous buttons -->
@@ -119,14 +124,14 @@
                     </div>
                 </div>
                 <footer class="card__footer">
-                    <a href="~/Courses/Courses" class="about-button"><span>О КУРСЕ</span></a>
+                    <a href="~/Courses/Courses" class="about-button"><span>ВЫБРАТЬ КУРС</span></a>
 
 
                 </footer>
             </article>
             <article class="card">
                 <header class="card__header">
-                    <h2 class="card__header-title">ТЕХКАРТЫ</h2>
+                    <h2 class="card__header-title">РЕЦЕПТУРНЫЕ КАРТЫ</h2>
                 </header>
                 <div class="card__items">
                     <div class="card__item">
@@ -135,12 +140,12 @@
                                type="radio"
                                name="color2"
                                checked />
-                        <img src="../images/cake_pink.jpeg"
+                        <img src="../images/razrez.jpg"
                              class="card__item-img" />
                     </div>
                 </div>
                 <footer class="card__footer">
-                    <a href="#" class="about-button"><span>О КУРСЕ</span></a>
+                    <a href="~/Courses/TechCard" class="about-button"><span>ВЫБРАТЬ КАРТУ </span></a>
                 </footer>
             </article>
             <article class="card">
@@ -154,12 +159,12 @@
                                type="radio"
                                name="color3"
                                checked />
-                        <img src="../images/cake_pink.jpeg"
+                        <img src="../images/cake_dino.jpeg"
                              class="card__item-img" />
                     </div>
                 </div>
                 <footer class="card__footer">
-                    <a href="#" class="about-button"><span>О КУРСЕ</span></a>
+                    <a href="~/Courses/FreeLessons" class="about-button"><span>ВЫБРАТЬ УРОК</span></a>
                 </footer>
             </article>
         </div>
@@ -215,48 +220,44 @@
             <div class="footer__contacts">
                 <h4>КОНТАКТЫ</h4>
                 <div class="social-links">
-                    <a href="https://facebook.com" target="_blank" aria-label="Facebook">
-                        <img src="../images/what.png" alt="Facebook">
-                    </a>
-                    <a href="https://twitter.com" target="_blank" aria-label="Twitter">
-                        <img src="../images/inst.png" alt="Twitter">
-                    </a>
-                    <a href="https://instagram.com" target="_blank" aria-label="Instagram">
-                        <img src="../images/tel.png" alt="Instagram">
+                    <a href="https://facebook.com" target="_blank" aria-label="Whatsup">
+                        <img src="../images/what.png" alt="Whatsup">
+                    </a>                    
+                    <a href="https://instagram.com" target="_blank" aria-label="Telegram">
+                        <img src="../images/tel.png" alt="Telegram">
                     </a>
                 </div>
 
-                <p> <a href="tel:+1234567890">+1 234 567 890</a></p>
+                <p> <a href="tel:+7(993)601-13-40">+7(993)601-13-40</a></p>
                 <p> <a href="mailto:info@example.com">info@example.com</a></p>
 
             </div>
             <div class="footer__UNP">
                 <p>
-                    ИП КОЛЕСНИКОВА ВИОЛЕТТА
-                    ИНН 616898781544
-                    ОГРНИП 322619600125356
-                    Юридический адрес:
-                    344103, г. МОСКВА,
-                    ул. Зорге 58а/8, кв. 73
+                    ИП КОЛЕСНИКОВА ВИОЛЕТТА ВАЛЕРЬЕВНА
+                    <br />
+                    ИНН 772283683031<br />
+                    Адрес: 344103, Москва,<br />
+                    ул.Новохохловская 15к1, кв.536
                 </p>
 
             </div>
 
             <div class="footer__info">
                 <h4>ИНФОРМАЦИЯ</h4>
-                <a href="/feedback">ВОПРОСЫ И ОТВЕТЫ</a>
+                <a href="/Home/Index#faq">ВОПРОСЫ И ОТВЕТЫ</a>
                 <a href="/feedback">ПУБЛИЧНАЯ ОФЕРТА</a>
-                <a href="/contact">ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ</a>
+                <a href="~/Home/PrivacyPolicy">ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ</a>
                 <a href="#">ПОЛЬЗОВАТЕЛЬСКОЕ СОГЛАШЕНИЕ</a>
 
             </div>
 
             <div class="footer__about">
                 <h4>ОБУЧЕНИЕ</h4>
-                <a href="/feedback">ОНЛАЙН-КУРСЫ</a>
-                <a href="/feedback">ТЕХКАРТЫ</a>
-                <a href="/contact">КОНТАКТЫ</a>
-                <a href="#">О КУРСЕ</a>
+                <a href="~/Courses/Courses">ОНЛАЙН-КУРСЫ</a>
+                <a href="~/Courses/TechCard">РЕЦЕПТУРНЫЕ КАРТЫ</a>
+                <a href="/feedback">БЕСПЛАТНЫЕ УРОКИ</a>
+                <a href="/Home/Index#footer">КОНТАКТЫ</a>
             </div>
         </div>
         <div class="footer__bottom">

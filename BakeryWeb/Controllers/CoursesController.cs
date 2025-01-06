@@ -12,5 +12,13 @@ namespace BakeryWeb.Controllers
         {
             return View();
         }
+        public IActionResult TechCard()
+        {
+            return View();
+        }
+        public IActionResult FreeLessons()
+        {
+            return View();
+        }
     }
 }

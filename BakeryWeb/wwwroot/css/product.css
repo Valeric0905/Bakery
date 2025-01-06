@@ -1,4 +1,10 @@
-﻿.section-product {
+﻿
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.section-product {
     font-family: 'Cormorant Garamond', Arial, sans-serif;
     background-color: #ede7df;
     position: relative;
