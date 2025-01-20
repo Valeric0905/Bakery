@@ -144,3 +144,18 @@ document.addEventListener("DOMContentLoaded", function () {
     observer.observe(image);
 });
 
+/// Intersection Observer to trigger animations when the section comes into view
+const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('active'); // Add active class when in view
+            observer.unobserve(entry.target); // Stop observing once it's in view
+        }
+    });
+}, { threshold: 0.5 }); // Trigger when 50% of the element is in view
+
+// Target the section-info elements for observation
+const sections = document.querySelectorAll('.section-info');
+sections.forEach(section => {
+    observer.observe(section); // Observe each section
+});

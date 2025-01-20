@@ -8,7 +8,7 @@ namespace BakeryWeb.Controllers
         {
             return View();
         }
-        public IActionResult Product()
+        public IActionResult Product_wedding()
         {
             return View();
         }
@@ -17,6 +17,10 @@ namespace BakeryWeb.Controllers
             return View();
         }
         public IActionResult FreeLessons()
+        {
+            return View();
+        }
+        public IActionResult Product_mini()
         {
             return View();
         }

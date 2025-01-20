@@ -28,8 +28,6 @@ html {
 ::-webkit-scrollbar-corner {
     background: #000;
 }
-
-
 /*DEFAULT*/
 body {
     width: 100%;
@@ -308,6 +306,8 @@ header {
     transition: 0.5s;
     font-family: 'Cormorant Garamond', Arial, sans-serif;
     font-weight: 1000;
+    justify-content: space-between;
+    position: relative;
 }
 
     .topnav a {
@@ -375,7 +375,7 @@ header {
     background-color: #f9f9f9;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+    z-index: 10000;
     border-top: 2px solid #ec4613;
 }
 
@@ -402,7 +402,7 @@ header {
     display: block;
 }
 
-@media screen and (max-width: 920px) {
+@media screen and (max-width: 1200px) {
     .logo {
         height: 50px;
         width: 100px;
@@ -434,12 +434,10 @@ header {
         display: block;
     }
 
-    #active {
-        display: none;
-    }
+   
 }
 
-@media screen and (max-width: 920px) {
+@media screen and (max-width: 1200px) {
     .topnav.responsive {
         position: relative;
     }
@@ -471,8 +469,6 @@ header {
             text-align: left;
         }
 }
-
-
 
 /* Hero */
 .container {
@@ -529,10 +525,7 @@ header {
         line-height: 1.8em;
         margin-bottom: 20px;
         margin-top: 30px;
-    }
-
-
-    
+    }  
 
 /* Slideshow Section on the right */
 .slideshow-container {
@@ -597,8 +590,6 @@ header {
    
 }
 
-   
-
 /* Fade animation */
 .fade {
     animation-name: fade;
@@ -615,8 +606,141 @@ header {
     }
 }
 
+/* Info section */
+.info-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    font-family: 'Cormorant Garamond', Arial, sans-serif;
+    background-color: #e0d7ce;
+    flex-wrap: wrap; /* Allow sections to wrap on smaller screens */
+}
 
-    
+.section-info {   
+    padding: 20px;   
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    opacity: 0; /* Initially hide sections */
+    transform: translateX(100%); /* Initially position sections to the right */
+    transition: opacity 0.6s ease, transform 0.6s ease; /* Animation for smooth transition */
+    text-align: left; /* Default alignment for larger screens */
+    justify-content: flex-start; /* Default vertical alignment */ 
+    text-align:center;
+}
+
+    .section-info.left {
+        transform: translateX(-100%); /* Initially position sections to the left */
+    }
+
+    .section-info.right {
+        transform: translateX(100%); /* Initially position sections to the right */
+    }
+
+.section-title {
+    color: #423a22;
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.section-description {
+    color: #423a22;
+    font-size: 18px;
+}
+
+/* Active state when elements are in view */
+.section-info.active {
+    opacity: 1;
+    transform: translateX(0); /* Bring sections to their normal position */
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 1024px) {
+    .info-container {
+        padding: 20px;
+        justify-content: space-around; /* Adjust the layout for medium screens */
+    }
+
+    .section-info {
+        width: 45%; /* Make sections smaller for medium screens */
+    }
+
+    .section-title {
+        font-size: 28px; /* Smaller font size for titles */
+    }
+
+    .section-description {
+        font-size: 16px; /* Smaller font size for descriptions */
+    }
+}
+
+@media (max-width: 768px) {
+    .info-container {
+        padding: 15px;
+        flex-direction: column; /* Stack sections vertically */
+        align-items: center;
+    }
+
+    .section-info {
+        width: 80%; /* Make sections take up more space on small screens */
+        margin-bottom: 20px; /* Space between sections */
+        text-align: center; /* Center align text */
+        justify-content: center; /* Center vertically */
+    }
+
+    .section-title {
+        font-size: 24px; /* Smaller font size for titles */
+    }
+
+    .section-description {
+        font-size: 14px; /* Smaller font size for descriptions */
+    }
+}
+
+@media (max-width: 480px) {
+    .info-container {
+        padding: 10px;
+        flex-direction: column; /* Stack sections vertically */
+        align-items: center;
+    }
+
+    .section-info {
+        width: 90%; /* Sections take up most of the screen on very small devices */
+        text-align: center; /* Center align text */
+        justify-content: center; /* Center vertically */
+    }
+
+    .section-title {
+        font-size: 20px; /* Adjust title size for very small screens */
+    }
+
+    .section-description {
+        font-size: 12px; /* Adjust description font size */
+    }
+}
+.inspiration-container {
+    text-align: center;
+    padding: 40px;
+    background-color: #f5f2e9;
+   
+}
+
+.inspiration-text {
+    font-family: 'Cormorant Garamond', Arial, sans-serif;
+    font-size: 1.3em;
+    color: #423a22;
+    line-height: 1.5;
+    max-width: 80%;
+    margin: 20px auto;
+    font-weight: lighter;
+}
+.decorative-line {
+    display: block;
+    width: 1300px;
+    height: 1px;
+    background-color: #d3d3d3; /* Line color */
+    margin: 20px auto;
+}
 
 
 
@@ -714,6 +838,14 @@ header {
     .arrow-icon {
         width: 70%;
     }
+    .inspiration-text {
+        font-size: 1.1em; /* Adjust font size for smaller screens */
+        padding: 20px; /* Reduce padding */
+    }
+
+    .decorative-line {
+        width: 60%; /* Smaller width for lines on mobile screens */
+    }
 }
 
 /* Small Mobile Screens */
@@ -731,11 +863,11 @@ header {
     }
 
         .text-section .title-2 {
-            font-size: 1.8em;
+            font-size: 3em;
         }
 
         .text-section .sub-title {
-            font-size: 0.8em;
+            font-size: 1em;
         }
 
     .image-class {
@@ -761,13 +893,17 @@ header {
     .arrow-icon {
         width: 60%;
     }
-}
+    .inspiration-container {
+        padding: 15px; /* Reduce padding on very small screens */
+    }
 
-   
+    .inspiration-text {
+        font-size: 1em; /* Further reduce font size for very small screens */
+    }
+
+    .decorative-line {
+        width: 50%; /* Further reduce line width */
+    }
 
 
-
-
-
-
-    
+}   

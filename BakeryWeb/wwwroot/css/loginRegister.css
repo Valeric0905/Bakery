@@ -152,21 +152,108 @@
     }
 
 
-   
 
 
 
-/* Responsive Styling */
+
+/* General Responsive Styles */
 @media (max-width: 768px) {
     .login-logout-card {
         max-width: 90%; /* Ensure the card fits well on smaller screens */
+        margin-left: auto; /* Center the card on mobile */
+        margin-right: auto;
     }
 
     .custom-card-body {
         padding: 20px; /* Adjust padding for smaller screens */
     }
 
-    #registerSubmit {
-        padding: 12px; /* Slightly smaller padding for button on mobile */
+    #registerSubmit, #login-submit {
+        padding: 12px; /* Slightly smaller padding for buttons */
+        font-size: 1rem; /* Adjust font size for better fit */
+    }
+
+    .form-container-wrapper {
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+
+    .form-control {
+        font-size: 0.9rem; /* Adjust font size for better readability */
     }
 }
+
+/* For Smaller Mobile Devices (Max Width 480px) */
+@media (max-width: 480px) {
+    .login-logout-card {
+        max-width: 100%; /* Use full width */
+        border-radius: 10px; /* Slightly smaller border radius */
+    }
+
+    .custom-card-body {
+        padding: 15px; /* Smaller padding */
+    }
+
+    .custom-card-header {
+        font-size: 1rem; /* Adjust header font size */
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+
+    #registerSubmit, #login-submit {
+        padding: 10px; /* Reduce button padding */
+        font-size: 0.9rem; /* Adjust font size */
+    }
+
+    #forgot-password {
+        font-size: 0.9rem; /* Smaller font size for links */
+    }
+
+    .form-check-input {
+        width: 18px; /* Slightly smaller checkbox */
+        height: 18px;
+    }
+
+    .form-label {
+        font-size: 0.9rem; /* Reduce label font size */
+        gap: 8px; /* Adjust gap */
+    }
+}
+
+/* For Tablets (Max Width 1024px) */
+@media (max-width: 1024px) {
+    .login-logout-card {
+        max-width: 80%; /* Slightly smaller for tablets */
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .form-container-wrapper {
+        padding: 15px; /* Adjust padding */
+    }
+
+    #registerSubmit, #login-submit {
+        padding: 14px; /* Slightly smaller button padding */
+        font-size: 1.05rem; /* Adjust button font size */
+    }
+
+    .form-control {
+        font-size: 1rem; /* Maintain readable size */
+    }
+}
+
+/* Landscape Orientation for Small Devices */
+@media (max-width: 812px) and (orientation: landscape) {
+    .login-logout-card {
+        max-width: 70%; /* Use more screen width in landscape */
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .custom-card-body {
+        padding: 15px; /* Adjust padding */
+    }
+
+    #registerSubmit, #login-submit {
+        font-size: 1rem; /* Adjust font size */
+    }
+}
+
